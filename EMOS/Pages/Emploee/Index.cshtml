@@ -1,0 +1,96 @@
+﻿@page
+@model EMOS.Pages.Emploee.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].Fname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].DOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].Jobrole)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].Ninumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].Contractedhours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].DBSchecked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employees[0].DBSrenewaldate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Employees) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jobrole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ninumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contractedhours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DBSchecked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DBSrenewaldate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

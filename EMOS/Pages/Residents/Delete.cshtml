@@ -1,0 +1,46 @@
+﻿@page
+@model EMOS.Pages.Residents.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Resident</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Resident.Roomnumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resident.Roomnumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resident.FnameInital)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resident.FnameInital)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resident.Surname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resident.Surname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resident.DOB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resident.DOB)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Resident.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
