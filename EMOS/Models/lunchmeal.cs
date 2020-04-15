@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace EMOS.Models
 {
-    public class lunchmeal
+    public class Lunchmeal
     {
         public int ID { get; set; }
         public string Lunch { get; set; }

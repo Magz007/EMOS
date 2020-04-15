@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using EMOS.Models;
 
-namespace EMOS.Pages.Lunch
+namespace EMOS.Pages.Kitchen
 {
     public class CreateModel : PageModel
     {
@@ -24,7 +24,7 @@ namespace EMOS.Pages.Lunch
         }
 
         [BindProperty]
-        public Lunchmeal Lunchmeal { get; set; }
+        public Kitchendepart Kitchendepart { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -33,7 +33,7 @@ namespace EMOS.Pages.Lunch
                 return Page();
             }
 
-            _context.Lunchmeal.Add(Lunchmeal);
+            _context.Kitchendepart.Add(Kitchendepart);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

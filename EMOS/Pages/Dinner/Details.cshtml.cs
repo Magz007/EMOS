@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using EMOS.Models;
 
-namespace EMOS.Pages.Lunch
+namespace EMOS.Pages.Dinner
 {
     public class DetailsModel : PageModel
     {
@@ -18,7 +18,7 @@ namespace EMOS.Pages.Lunch
             _context = context;
         }
 
-        public Lunchmeal Lunchmeal { get; set; }
+        public Dinnermeal Dinnermeal { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -27,9 +27,9 @@ namespace EMOS.Pages.Lunch
                 return NotFound();
             }
 
-            Lunchmeal = await _context.Lunchmeal.FirstOrDefaultAsync(m => m.ID == id);
+            Dinnermeal = await _context.Dinnermeal.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (Lunchmeal == null)
+            if (Dinnermeal == null)
             {
                 return NotFound();
             }

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using EMOS.Models;
 
-namespace EMOS.Pages.Lunch
+namespace EMOS.Pages.Kitchen
 {
     public class DeleteModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace EMOS.Pages.Lunch
         }
 
         [BindProperty]
-        public Lunchmeal Lunchmeal { get; set; }
+        public Kitchendepart Kitchendepart { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,9 +28,9 @@ namespace EMOS.Pages.Lunch
                 return NotFound();
             }
 
-            Lunchmeal = await _context.Lunchmeal.FirstOrDefaultAsync(m => m.ID == id);
+            Kitchendepart = await _context.Kitchendepart.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (Lunchmeal == null)
+            if (Kitchendepart == null)
             {
                 return NotFound();
             }
@@ -44,11 +44,11 @@ namespace EMOS.Pages.Lunch
                 return NotFound();
             }
 
-            Lunchmeal = await _context.Lunchmeal.FindAsync(id);
+            Kitchendepart = await _context.Kitchendepart.FindAsync(id);
 
-            if (Lunchmeal != null)
+            if (Kitchendepart != null)
             {
-                _context.Lunchmeal.Remove(Lunchmeal);
+                _context.Kitchendepart.Remove(Kitchendepart);
                 await _context.SaveChangesAsync();
             }
 

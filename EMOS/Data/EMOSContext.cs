@@ -18,11 +18,13 @@ namespace EMOS.Models
 
         public DbSet<EMOS.Models.Resident> Resident { get; set; }
 
-        public DbSet<EMOS.Models.RCH> RCH { get; set; }
-
         public DbSet<EMOS.Models.Breakfastmeal> Breakfastmeal { get; set; }
 
-        public DbSet<EMOS.Models.lunchmeal> lunchmeal { get; set; }
+        public DbSet<EMOS.Models.Lunchmeal> Lunchmeal { get; set; }
+
+        public DbSet<EMOS.Models.Dinnermeal> Dinnermeal { get; set; }
+
+        public DbSet<EMOS.Models.Kitchendepart> Kitchendepart { get; set; }
 
        
     }

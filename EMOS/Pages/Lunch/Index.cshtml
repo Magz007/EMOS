@@ -1,4 +1,5 @@
 ﻿@page
+
 @model EMOS.Pages.Lunch.IndexModel
 
 @{
@@ -14,16 +15,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.lunchmeal[0].Lunch)
+                @Html.DisplayNameFor(model => model.Lunchmeal[0].Lunch)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.lunchmeal[0].Selection)
+                @Html.DisplayNameFor(model => model.Lunchmeal[0].Selection)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.lunchmeal) {
+@foreach (var item in Model.Lunchmeal) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Lunch)

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using EMOS.Models;
 
-namespace EMOS.Pages.Lunch
+namespace EMOS.Pages.Dinner
 {
     public class IndexModel : PageModel
     {
@@ -18,11 +18,11 @@ namespace EMOS.Pages.Lunch
             _context = context;
         }
 
-        public IList<Lunchmeal> Lunchmeal { get;set; }
+        public IList<Dinnermeal> Dinnermeal { get;set; }
 
         public async Task OnGetAsync()
         {
-            Lunchmeal = await _context.Lunchmeal.ToListAsync();
+            Dinnermeal = await _context.Dinnermeal.ToListAsync();
         }
     }
 }

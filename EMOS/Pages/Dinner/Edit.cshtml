@@ -1,5 +1,5 @@
 ﻿@page
-@model EMOS.Pages.Lunch.EditModel
+@model EMOS.Pages.Dinner.EditModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -7,22 +7,22 @@
 
 <h2>Edit</h2>
 
-<h4>lunchmeal</h4>
+<h4>Dinnermeal</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Lunchmeal.ID" />
+            <input type="hidden" asp-for="Dinnermeal.ID" />
             <div class="form-group">
-                <label asp-for="Lunchmeal.Lunch" class="control-label"></label>
-                <input asp-for="Lunchmeal.Lunch" class="form-control" />
-                <span asp-validation-for="Lunchmeal.Lunch" class="text-danger"></span>
+                <label asp-for="Dinnermeal.Dinner" class="control-label"></label>
+                <input asp-for="Dinnermeal.Dinner" class="form-control" />
+                <span asp-validation-for="Dinnermeal.Dinner" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Lunchmeal.Selection" class="control-label"></label>
-                <input asp-for="Lunchmeal.Selection" class="form-control" />
-                <span asp-validation-for="Lunchmeal.Selection" class="text-danger"></span>
+                <label asp-for="Dinnermeal.Selection" class="control-label"></label>
+                <input asp-for="Dinnermeal.Selection" class="form-control" />
+                <span asp-validation-for="Dinnermeal.Selection" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

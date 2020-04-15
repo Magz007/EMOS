@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EMOS.Models;
 
-namespace EMOS.Pages.Lunch
+namespace EMOS.Pages.Kitchen
 {
     public class EditModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace EMOS.Pages.Lunch
         }
 
         [BindProperty]
-        public Lunchmeal Lunchmeal { get; set; }
+        public Kitchendepart Kitchendepart { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,9 +29,9 @@ namespace EMOS.Pages.Lunch
                 return NotFound();
             }
 
-            Lunchmeal = await _context.Lunchmeal.FirstOrDefaultAsync(m => m.ID == id);
+            Kitchendepart = await _context.Kitchendepart.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (Lunchmeal == null)
+            if (Kitchendepart == null)
             {
                 return NotFound();
             }
@@ -45,7 +45,7 @@ namespace EMOS.Pages.Lunch
                 return Page();
             }
 
-            _context.Attach(Lunchmeal).State = EntityState.Modified;
+            _context.Attach(Kitchendepart).State = EntityState.Modified;
 
             try
             {
@@ -53,7 +53,7 @@ namespace EMOS.Pages.Lunch
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!LunchmealExists(Lunchmeal.ID))
+                if (!KitchendepartExists(Kitchendepart.ID))
                 {
                     return NotFound();
                 }
@@ -66,9 +66,9 @@ namespace EMOS.Pages.Lunch
             return RedirectToPage("./Index");
         }
 
-        private bool LunchmealExists(int id)
+        private bool KitchendepartExists(int id)
         {
-            return _context.Lunchmeal.Any(e => e.ID == id);
+            return _context.Kitchendepart.Any(e => e.ID == id);
         }
     }
 }

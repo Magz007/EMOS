@@ -1,5 +1,5 @@
 ﻿@page
-@model EMOS.Pages.Emploee.IndexModel
+@model EMOS.Pages.Kitchen.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -14,33 +14,35 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Employees[0].Fname)
+                @Html.DisplayNameFor(model => model.Kitchendepart[0].Residentname)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Employees[0].Surname)
+                @Html.DisplayNameFor(model => model.Kitchendepart[0].ResidentroomNo)
             </th>
-            
             <th>
-                @Html.DisplayNameFor(model => model.Employees[0].Jobrole)
+                @Html.DisplayNameFor(model => model.Kitchendepart[0].Mealtype)
             </th>
-            
+            <th>
+                @Html.DisplayNameFor(model => model.Kitchendepart[0].MealSelection)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Employees) {
+@foreach (var item in Model.Kitchendepart) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Fname)
+                @Html.DisplayFor(modelItem => item.Residentname)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Surname)
+                @Html.DisplayFor(modelItem => item.ResidentroomNo)
             </td>
-            
             <td>
-                @Html.DisplayFor(modelItem => item.Jobrole)
+                @Html.DisplayFor(modelItem => item.Mealtype)
             </td>
-           
+            <td>
+                @Html.DisplayFor(modelItem => item.MealSelection)
+            </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

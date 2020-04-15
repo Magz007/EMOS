@@ -1,5 +1,5 @@
 ﻿@page
-@model EMOS.Pages.Emploee.IndexModel
+@model EMOS.Pages.Dinner.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -14,33 +14,23 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Employees[0].Fname)
+                @Html.DisplayNameFor(model => model.Dinnermeal[0].Dinner)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Employees[0].Surname)
+                @Html.DisplayNameFor(model => model.Dinnermeal[0].Selection)
             </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Employees[0].Jobrole)
-            </th>
-            
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Employees) {
+@foreach (var item in Model.Dinnermeal) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Fname)
+                @Html.DisplayFor(modelItem => item.Dinner)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Surname)
+                @Html.DisplayFor(modelItem => item.Selection)
             </td>
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.Jobrole)
-            </td>
-           
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

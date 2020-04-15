@@ -8,7 +8,7 @@ namespace EMOS.Models
     public class Dinnermeal
     {
         public int ID { get; set; }
-        public string dinner { get; set; }
+        public string Dinner { get; set; }
         public string Selection { get; set; }
     }
 }
