@@ -17,9 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Menu\" />
     <Folder Include="Pages\Breakfast\" />
+    <Folder Include="Pages\Dinner\" />
+    <Folder Include="Pages\Lunch\" />
     <Folder Include="Pages\Beverages\" />
+    <Folder Include="Pages\Menu\" />
+    <Folder Include="Pages\Kitchen\" />
   </ItemGroup>
 
 </Project>
