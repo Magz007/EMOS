@@ -16,4 +16,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Menu\" />
+    <Folder Include="Pages\Breakfast\" />
+    <Folder Include="Pages\Beverages\" />
+  </ItemGroup>
+
 </Project>

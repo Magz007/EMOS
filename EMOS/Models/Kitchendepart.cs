@@ -10,8 +10,9 @@ namespace EMOS.Models
         public int ID { get; set; }
         public string Residentname { get; set; }
         public int ResidentroomNo { get; set; }
-        public string Mealtype{ get; set; }
-        public string MealSelection { get; set; }
+        public string MealtypeID{ get; set; }
+        public string MealType{ get; set; }
+        public string DrinkSelctionID { get; set; }
 
     }
 }

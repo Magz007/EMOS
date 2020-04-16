@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace EMOS.Models
 {
-    public class Lunchmeal
+    public class Menus
     {
         public int ID { get; set; }
-        public string Selection1 { get; set; }
-        public string Selection2 { get; set; }
-        public string Selection3 { get; set; }
-       
+        public string MealType { get; set; }
+        public int MealtypeID { get; set; }
+
+        
 
     }
 }
